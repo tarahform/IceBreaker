@@ -15,8 +15,6 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
             };
-            locationCharityAPI(pos.lat, pos.lng)
-            // console.log('POS: ' + JSON.stringify(pos));
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
