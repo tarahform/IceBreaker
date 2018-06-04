@@ -11,17 +11,57 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/"
     crossorigin="anonymous">
   <link rel="stylesheet" href="../public/css/style.css" />
-  <title>IceBreaker | Aguacate</title>
+  <title>Ice Breaker | Aguacate</title>
 </head>
+
 <body>
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="" width="50" height="50" alt=""> Ice Breaker
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Checkin</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="">Mission Statement</a>
+            <a class="dropdown-item" href="">About Us</a>
+            <a class="dropdown-item" href="">Developers</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Navbar End-->
+
+  <!--Body-->
   <div class="row" id="header">
     <div class="col-md-12">
-      <h1>IceBreaker</h1>
+      <div class="transbox text-center">
+        {{{ body }}}
+      </div>
     </div>
   </div>
-  <div class="transbox text-center">
-    {{{ body }}}
-  </div>
+  <!--Body End-->
+
   <script src="../../server.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
   <script>
