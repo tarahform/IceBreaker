@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.get("/", function (req, res) {
-        var bios = { anything: "anything" };
+        var bios = {};
         res.render("index", bios);
     });
 }
