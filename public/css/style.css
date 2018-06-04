@@ -43,3 +43,13 @@
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  /* FOOTER */
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.page-footer {
+  background-color: rgb(1, 156, 84);
+}
