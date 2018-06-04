@@ -36,3 +36,17 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }; // end of map on page //
 // // -------------//
+
+// FOURSQUARE API
+var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
+var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
+var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
+    + "&client_id=" + clientID + "&client_secret=" + clientSecret 
+    + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
+
+    $.ajax({
+        method: "GET",
+        url: fourSquareURL,
+    }).then(function (response) {
+        
+        });
