@@ -1,3 +1,7 @@
+// AOS //
+AOS.init();
+// end of AOS //
+
 // Put map on page //
 var map, infoWindow;
 function initMap() {
