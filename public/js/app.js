@@ -44,9 +44,9 @@ var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
     + "&client_id=" + clientID + "&client_secret=" + clientSecret 
     + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
 
-    $.ajax({
-        method: "GET",
-        url: fourSquareURL,
-    }).then(function (response) {
+    // $.ajax({
+    //     method: "GET",
+    //     url: fourSquareURL,
+    // }).then(function (response) {
         
-        });
+    //     });
