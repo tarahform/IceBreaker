@@ -82,12 +82,13 @@ footer a {
 }
 .developer-image {
   position: relative;
-  width: 100%;
+  width: auto;
+  height: 100%;
 }
 .image {
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 .overlay {
   position: absolute;
@@ -96,7 +97,7 @@ footer a {
   left: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: auto;
   opacity: 0;
   transition: .5s ease;
   background-color: rgb(79, 79, 179);
@@ -106,7 +107,7 @@ footer a {
 }
 .devtext {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
