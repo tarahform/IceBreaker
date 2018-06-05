@@ -80,18 +80,15 @@ footer a {
 .developers {
   text-align: center;
 }
-
 .developer-image {
   position: relative;
   width: 100%;
 }
-
 .image {
   display: block;
   width: 100%;
   height: auto;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -104,11 +101,9 @@ footer a {
   transition: .5s ease;
   background-color: rgb(79, 79, 179);
 }
-
 .developer-image:hover .overlay {
   opacity: 1;
 }
-
 .text {
   color: white;
   font-size: 20px;
