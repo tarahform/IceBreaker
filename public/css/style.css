@@ -77,18 +77,14 @@ footer a {
 /*End of a Modal*/
 
 /*dev section*/
-.developers {
-  text-align: center;
-}
 .developer-image {
   position: relative;
-  width: auto;
-  height: 100%;
+  width: 100%;
 }
 .image {
   display: block;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .overlay {
   position: absolute;
@@ -97,17 +93,17 @@ footer a {
   left: 0;
   right: 0;
   height: 100%;
-  width: auto;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgb(79, 79, 179);
+  background-color: rgb(1, 105, 56);
 }
 .developer-image:hover .overlay {
   opacity: 1;
 }
 .devtext {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
