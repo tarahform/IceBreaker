@@ -2,55 +2,71 @@
 AOS.init();
 // end of AOS //
 
-// Put map on page //
-var map, infoWindow;
+// Test Map with markers //
+var map;
+var markers = [];
+
 function initMap() {
+    var chicago = { lat: 41.8781, lng: 87.6298 };
+
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 39.5, lng: -98.35 },
-        zoom: 8
+        zoom: 12,
+        center: chicago,
+        mapTypeId: 'terrain'
     });
-    infoWindow = new google.maps.InfoWindow;
 
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            // console.log("POSITION: " + JSON.stringify(position));
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-            };
+    // This event listener will call addMarker() when the map is clicked.
+    map.addListener('click', function (event) {
+        addMarker(event.latLng);
+    });
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-        }, function () {
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
+    // Adds a marker at the center of the map.
+    addMarker(chicago);
+}
+
+// Adds a marker to the map and push to the array.
+function addMarker(location) {
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+    markers.push(marker);
+}
+
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
     }
 }
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-}; // end of map on page //
-// // -------------//
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+    setMapOnAll(null);
+}
+
+// Shows any markers currently in the array.
+function showMarkers() {
+    setMapOnAll(map);
+}
+
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+    clearMarkers();
+    markers = [];
+}
+// Test Map with markers //
 
 // FOURSQUARE API
 var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
 var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
 var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
-    + "&client_id=" + clientID + "&client_secret=" + clientSecret 
+    + "&client_id=" + clientID + "&client_secret=" + clientSecret
     + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
 
     // $.ajax({
     //     method: "GET",
     //     url: fourSquareURL,
     // }).then(function (response) {
-        
+
     //     });
