@@ -1,3 +1,12 @@
+/* ============================================== */
+/* standard page style */
+hr {
+  margin:50px 0; 
+}
+/*end of standard page style*/
+/* ============================================== */
+
+/* ============================================== */
 /* map */
 #map {
   width: auto;
@@ -17,18 +26,18 @@
   padding-left: 10px;
 }
 /* end of map */
+/* ============================================== */
 
+/* ============================================== */
 /* HEADER */
 .header-image {
   width: 100%;
   height: 450px;
 }
 /*End of HEADER*/
+/* ============================================== */
 
-hr {
-  margin:50px 0; 
-}
-
+/* ============================================== */
 /* FOOTER */
 footer a {
   text-decoration: none;
@@ -39,43 +48,9 @@ footer a {
   background-color: rgb(51, 53, 167);
 }
 /*End of FOOTER*/
+/* ============================================== */
 
-/* Modal */
-.modal{
-  display: none; 
-  position: fixed;
-  /* z-index: 1; */
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 25px
-}
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-/*End of a Modal*/
-
+/* ============================================== */
 /*dev section*/
 .developer-image {
   position: relative;
@@ -112,7 +87,9 @@ footer a {
   text-align: center;
 }
 /*end of dev section overlay image */
+/* ============================================== */
 
+/* ============================================== */
 /*User Profile*/
 #userPicture {
   border-radius: 50%;
@@ -122,7 +99,17 @@ footer a {
   padding-top: 125px;
 }
 /*End of User Profile*/
+/* ============================================== */
 
+/* ============================================== */
+/* About Row */
+#mission, #about {
+margin: 75px 0px; 
+}
+/*End of About Row*/
+/* ============================================== */
+
+/* ============================================== */
 /* Progress Bar */
 .circular-progress-bar {
   position: relative;
@@ -148,3 +135,42 @@ footer a {
   font-size: 21px;
 }
 /*End of Progress Bar*/
+/* ============================================== */
+
+/* ============================================== */
+/* Modal */
+/* .modal{
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 25px
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+} */
+/*End of a Modal*/
+/* ============================================== */
