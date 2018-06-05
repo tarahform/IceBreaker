@@ -120,9 +120,9 @@ footer {
 
 /* ============================================== */
 /* About Row */
-#mission, #about {
+/* #mission, #about {
 margin: 75px 0px; 
-}
+} */
 #aboutBodyRow {
   padding: 5%;
 }
