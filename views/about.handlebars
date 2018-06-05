@@ -1,8 +1,29 @@
 <!-- About Section -->
-<div id="about">
-    <h1>About</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ipsam! Nihil, fuga atque voluptate doloribus unde
-        hic facere, temporibus nam sed molestiae minus tempora ut. Ipsum iure itaque facere. Rem!</p>
+<div class="row">
+    <div class="col-md-4" id="mission">
+        <h1>Mission Statement</h1>
+        <p>Here at Ice Breaker, we focus on inspiring and promoting sociability and kindness in the world. We all need a pick-me-up
+            sometimes, amiright? So we partnered with your local coffee shops to give you more incentive to complete a kind
+            act, to bring yourself out of your comfort zone, and to socialize in a way you may not have before.</p>
+    </div>
+    <!--Map-->
+    <div class="col-md-4" id="mapFloatingPanel">
+        <input onclick="clearMarkers();" type=button value="Hide Markers">
+        <input onclick="showMarkers();" type=button value="Show All Markers">
+        <input onclick="deleteMarkers();" type=button value="Delete Markers">
+    </div>
+    <div id="map"></div>
+    <!--End of Map-->
+    <div class="col-md-4" id="about">
+        <h1>How It Works</h1>
+        <p>Create a profile.
+            <br> Search for local coffee shops in your area.
+            <br> Go get some coffee!
+            <br> Check-in and complete some challenges.
+            <br> Rack up points to use towards discounts.
+            <br> Leave knowing you tried something new today.
+        </p>
+    </div>
 </div>
 
 <!--IceBreaker Developers-->

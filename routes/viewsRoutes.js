@@ -3,6 +3,10 @@ module.exports = function (app) {
         var obj = {};
         res.render("index", obj);
     });
+    app.get("/map", function (req, res) {
+        var obj = {};
+        res.render("map", obj);
+    });
     app.get("/about", function (req, res) {
         var obj = {};
         res.render("about", obj);
