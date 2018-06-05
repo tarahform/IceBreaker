@@ -20,5 +20,6 @@ create table users(
 
 create table challenges(
     id INT NOT NULL AUTO_INCREMENT,
+    challenge_task VARCHAR(255),
     point_value INT
 );
