@@ -79,6 +79,7 @@ function createMarker(location) {
         clearMarkers();
         markers = [];
     }
+}
     // Test Map with markers //
 
     // FOURSQUARE API
