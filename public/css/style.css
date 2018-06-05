@@ -17,21 +17,14 @@ hr {
   height: 50px;
 }
 .hero-image {
-  /* The image used */
   background-image: url("../img/views/shutterstock_551964289.jpg");
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
+  height: 50%;   /* Set a specific height */
+  background-position: center;  /* Position and center the image to scale nicely on all screens */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
-/* Place text in the middle of the image */
-.hero-text {
+.hero-text { /* Place text in the middle of the image */
   text-align: center;
   position: absolute;
   top: 50%;
@@ -88,6 +81,10 @@ footer {
   width: 100%;
   height: 50px;
   clear: both;
+}
+footer a {
+  text-decoration: none;
+  color: black;
 }
 /*End of FOOTER*/
 /* ============================================== */
