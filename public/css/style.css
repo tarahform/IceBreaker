@@ -15,7 +15,7 @@ hr {
 }
 .wrapper {
   min-height: 100%;
-  margin: 0 auto -60px;  /* Replace *** with the negative height of your footer */
+  margin: 0 auto -100px;  /* Replace *** with the negative height of your footer */
 }
 /*end of standard page style*/
 /* ============================================== */
@@ -60,10 +60,8 @@ footer a {
 
 .page-footer {
   background-color: rgb(51, 53, 167);
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 100px;
   clear: both;
 }
 /*End of FOOTER*/
