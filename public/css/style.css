@@ -1,3 +1,8 @@
+#map {
+  width: 400px;
+  height: 400px;
+}
+
 /* HEADER */
 .header-image {
   width: 100%;
@@ -36,7 +41,7 @@ footer a {
 }
 
 .page-footer {
-  background-color: rgb(1, 156, 84);
+  background-color: rgb(79, 79, 179);
 }
 
 /* Map */
@@ -102,7 +107,7 @@ footer a {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgb(1, 105, 56);
+  background-color: rgb(79, 79, 179);
 }
 
 .developer-image:hover .overlay {
