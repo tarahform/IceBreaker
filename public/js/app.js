@@ -78,8 +78,10 @@ function deleteMarkers() {
 // Test Map with markers //
 //==========================================================================//
 
-var coffeShopId = "4bf58dd8d48988d1e0931735"
-var foodId = "4d4b7105d754a06374d81259"
+var coffeShopId = "4bf58dd8d48988d1e0931735";
+var foodId = "4d4b7105d754a06374d81259";
+var barId = "4bf58dd8d48988d116941735";
+var breweryId = "50327c8591d4c4b30a586d5d";
 
 // FOURSQUARE API
 function getFromFourSquare(categoryId) {
@@ -111,17 +113,23 @@ function returnVenueLocations(venueList) {
     return newList;
 }
 
-Promise.all([getFromFourSquare(coffeShopId), getFromFourSquare(foodId)]).then(function (values) {
+Promise.all([getFromFourSquare(coffeShopId), getFromFourSquare(foodId), getFromFourSquare(barId), getFromFourSquare(breweryId)]).then(function (values) {
     // console.log(values);
 
     var coffeeResponse = values[0].response.venues;
     var foodResponse = values[1].response.venues;
+    var barResponse = values[2].response.venues;
+    var breweryResponse = values[3].response.venues;
 
     var coffeeShops = returnVenueLocations(coffeeResponse);
     var foodShops = returnVenueLocations(foodResponse);
+    var barShops = returnVenueLocations(barResponse);
+    var breweryShops = returnVenueLocations(breweryResponse);
 
     console.log(coffeeShops);
     console.log(foodShops);
+    console.log(barShops);
+    console.log(breweryShops);
 })
 
 //==========================================================================//
