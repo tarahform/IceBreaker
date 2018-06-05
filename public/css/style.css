@@ -3,7 +3,7 @@
   width: 400px;
   height: 400px;
 }
-#floating-panel {
+#mapFloatingPanel {
   position: absolute;
   top: 10px;
   left: 25%;
