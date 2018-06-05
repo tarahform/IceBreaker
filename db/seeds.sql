@@ -1,4 +1,4 @@
-use icebreaker_db;
+use icebreakers_db;
 
 insert into users (first_name, middle_name, last_name, photo_link, email, phone_number, age, challenge_id, user_points)
 values ("Nicholas", "Madrid", "Edwards", "photolink", "n.m.e.dummyemail@gmail.com", "7086622234", 18, "[1,4,6,12,10]", 5)
