@@ -106,6 +106,10 @@ footer a {
 #mission, #about {
 margin: 75px 0px; 
 }
+#aboutRow {
+  margin: 3%;
+  padding: 3%;
+}
 /*End of About Row*/
 /* ============================================== */
 
