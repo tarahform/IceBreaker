@@ -46,6 +46,9 @@ footer a {
 
 .page-footer {
   background-color: rgb(51, 53, 167);
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
 /*End of FOOTER*/
 /* ============================================== */
