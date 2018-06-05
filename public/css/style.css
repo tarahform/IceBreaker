@@ -1,5 +1,15 @@
 /* ============================================== */
 /* standard page style */
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+.container {
+min-height:100%;
+position:relative;
+}
 hr {
   margin:50px 0; 
 }
@@ -46,9 +56,10 @@ footer a {
 
 .page-footer {
   background-color: rgb(51, 53, 167);
-  position:absolute;
-  bottom:0;
-  width:100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
 }
 /*End of FOOTER*/
 /* ============================================== */
