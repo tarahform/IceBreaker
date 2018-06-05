@@ -81,7 +81,7 @@ footer a {
   position: relative;
   width: 100%;
 }
-.image {
+#devImgLink {
   display: block;
   width: 100%;
   height: auto;
