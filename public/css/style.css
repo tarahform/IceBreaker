@@ -104,7 +104,7 @@ footer a {
 .developer-image:hover .overlay {
   opacity: 1;
 }
-.text {
+.devtext {
   color: white;
   font-size: 20px;
   position: absolute;
