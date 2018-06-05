@@ -49,8 +49,14 @@
         </div>
     </nav>
     <!--Navbar End-->
-
-    {{{ body }}}
+    <div class="col-md-4">
+        <div id="mapFloatingPanel">
+            <input onclick="clearMarkers();" type="button" value="Hide Markers">
+            <input onclick="showMarkers();" type="button" value="Show All Markers">
+            <input onclick="deleteMarkers();" type="button" value="Delete Markers">
+        </div>
+        <div id="map"></div>
+    </div>
 
     <!--Footer-->
     <footer class="page-footer">
@@ -113,7 +119,7 @@
     <!--Google Maps API-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAny8QhQ3ISkkGwCimkBoNfskamSbb7hBU&callback=initMap"> </script>
     <!--JS-->
-    <script src="../public/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
