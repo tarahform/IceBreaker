@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "icebreaker_db",
+    "database": "icebreakers_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
