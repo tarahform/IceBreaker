@@ -1,7 +1,7 @@
 module.exports = function (app) {
     app.get("/", function (req, res) {
         var obj = {};
-        res.render("about", obj);
+        res.render("home", obj);
     });
     app.get("/about", function (req, res) {
         var obj = {};
