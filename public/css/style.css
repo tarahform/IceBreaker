@@ -135,3 +135,12 @@ footer a {
     font-weight: bold;
     font-size: 20px;
 }
+
+/*User Profile*/
+#userPicture {
+  border-radius: 50%;
+  margin-left: 25%;
+}
+#userInfo {
+  padding-top: 125px;
+}
