@@ -78,12 +78,13 @@ function deleteMarkers() {
 // Test Map with markers //
 //==========================================================================//
 
+// Variables for each Foursquare CategoryId 
 var coffeShopId = "4bf58dd8d48988d1e0931735";
 var foodId = "4d4b7105d754a06374d81259";
 var barId = "4bf58dd8d48988d116941735";
 var breweryId = "50327c8591d4c4b30a586d5d";
 
-// FOURSQUARE API
+// FORSQUARE API
 function getFromFourSquare(categoryId) {
     var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
     var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
