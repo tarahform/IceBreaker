@@ -151,3 +151,9 @@ footer a {
   font-size: 21px;
 }
 /*End of Progress Bar*/
+
+/* Logo */
+#logo {
+  float: left;
+}
+/* End of Logo*/
