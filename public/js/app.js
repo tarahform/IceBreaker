@@ -2,6 +2,7 @@
 AOS.init();
 // end of AOS //
 
+//==========================================================================//
 // Test Map with markers //
 var map;
 var markers = [];
@@ -80,18 +81,44 @@ function createMarker(location) {
         markers = [];
     }
 }
-    // Test Map with markers //
+// Test Map with markers //
+//==========================================================================//
 
-    // FOURSQUARE API
-    var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
-    var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
-    var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
-        + "&client_id=" + clientID + "&client_secret=" + clientSecret
-        + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
+// FOURSQUARE API
+var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
+var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
+var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
+    + "&client_id=" + clientID + "&client_secret=" + clientSecret
+    + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
 
-    // $.ajax({
-    //     method: "GET",
-    //     url: fourSquareURL,
-    // }).then(function (response) {
+// $.ajax({
+//     method: "GET",
+//     url: fourSquareURL,
+// }).then(function (response) {
 
-    //     });
+//     });
+
+//==========================================================================//
+// progress bar //
+var progress_circle = $(".my-progress-bar").gmpc({
+    // color
+    color: "#000000",
+    // height
+    height: "300px",
+    // width
+    width: "300px",
+    // line width
+    line_width: 8,
+    // stating value
+    starting_position: 25,
+    // max value
+    percent: 100,
+    // false = counterclockwise
+    counter_clockwise: false,
+    // show value
+    percentage: true,
+    // custom counter text
+    text: ''
+})
+// end progress bar //
+//==========================================================================//
