@@ -41,16 +41,49 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }; // end of map on page //
 // // -------------//
 
-// FOURSQUARE API
-var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
-var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
-var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
-    + "&client_id=" + clientID + "&client_secret=" + clientSecret 
-    + "&v=20180604" + "&categoryId=4bf58dd8d48988d1e0931735";
+var coffeShopId = "4bf58dd8d48988d1e0931735"
+var foodId = "4d4b7105d754a06374d81259"
 
-    // $.ajax({
-    //     method: "GET",
-    //     url: fourSquareURL,
-    // }).then(function (response) {
-        
-    //     });
+// FOURSQUARE API
+function getFromFourSquare(categoryId) {
+    var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
+    var clientSecret = "CI1G4J1YZ4YXFCQGNVBAPVA5FGLUEKFR3VSK0ESH2BEKYANW";
+    var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
+        + "&client_id=" + clientID + "&client_secret=" + clientSecret
+        + "&v=20180604" + "&categoryId=" + categoryId;
+
+    return $.ajax({
+        method: "GET",
+        url: fourSquareURL,
+    })
+}
+
+function returnVenueLocations (venueList) {
+    var newList = [];
+
+    for (var i = 0; i < venueList.length; i++) {
+        var thisShop = {
+            name: venueList[i].name,
+            lat: venueList[i].location.lat,
+            lng: venueList[i].location.lng
+        }
+
+        newList.push(thisShop);
+    }
+
+    return newList;
+}
+
+Promise.all([getFromFourSquare(coffeShopId), getFromFourSquare(foodId)]).then(function(values) {
+    // console.log(values);
+
+    var coffeeResponse = values[0].response.venues;
+    var foodResponse = values[1].response.venues;
+
+    var coffeeShops = returnVenueLocations(coffeeResponse);
+    var foodShops = returnVenueLocations(foodResponse);
+    
+    console.log(coffeeShops);
+    console.log(foodShops);
+})
+
