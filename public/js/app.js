@@ -99,28 +99,30 @@ function returnVenueLocations(venueList) {
     return newList;
 }
 
-Promise.all([getFromFourSquare(coffeShopId), getFromFourSquare(foodId), getFromFourSquare(barId), getFromFourSquare(breweryId)]).then(function (values) {
-    // console.log(values);
-
-    var coffeeResponse = values[0].response.venues;
-    var foodResponse = values[1].response.venues;
-    var barResponse = values[2].response.venues;
-    var breweryResponse = values[3].response.venues;
-
-    var coffeeShops = returnVenueLocations(coffeeResponse);
-    var foodShops = returnVenueLocations(foodResponse);
-    var barShops = returnVenueLocations(barResponse);
-    var breweryShops = returnVenueLocations(breweryResponse);
-
-    console.log(coffeeShops);
-    console.log(foodShops);
-    console.log(barShops);
-    console.log(breweryShops);
-})
+function foursquareController() {
+    Promise.all([getFromFourSquare(coffeShopId), getFromFourSquare(foodId), getFromFourSquare(barId), getFromFourSquare(breweryId)]).then(function (values) {
+        // console.log(values);
+    
+        var coffeeResponse = values[0].response.venues;
+        var foodResponse = values[1].response.venues;
+        var barResponse = values[2].response.venues;
+        var breweryResponse = values[3].response.venues;
+    
+        var coffeeShops = returnVenueLocations(coffeeResponse);
+        var foodShops = returnVenueLocations(foodResponse);
+        var barShops = returnVenueLocations(barResponse);
+        var breweryShops = returnVenueLocations(breweryResponse);
+    
+        console.log(coffeeShops);
+        console.log(foodShops);
+        console.log(barShops);
+        console.log(breweryShops);
+    })
+}
 
 //==========================================================================//
 // progress bar //
-var progress_circle = $(".my-progress-bar").gmpc({
+var progress_circle = $(".my-progress-bar").css({
     // color
     color: "#000000",
     // height
@@ -221,6 +223,24 @@ function newUser() {
 //==========================================================================//
 // Logic - Functionality //
 
+// On Submit for Creating a New Recommendation
+$("#addChallenge").on("click", function(event) {
+    event.preventDefault();
+
+    var newRecommendation = {
+        challenge_task: $("#challengeRecommendationInput").val().trim(),
+        point_value: $("#pointValueInput").val().trim()
+    };
+
+    // Send POST Request
+    $.ajax("/challenges/insert", {
+        type: "POST",
+        data: newRecommendation
+    }).then(function() {
+        console.log("Created New Recommendation!")
+        location.reload();
+    });
+});
 
 
 // End of Logic - Functionality //
