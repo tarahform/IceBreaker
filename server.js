@@ -17,6 +17,7 @@ app.use(express.static("public"));
 require("./routes/apiroutes")(app);
 require("./routes/viewsRoutes")(app);
 
+// place -> {force: true} to test - take out before push to master
 db.sequelize.sync().then(function () {
     console.log("DATABASE IS CONNECTED!");
     app.listen(PORT, function () {
