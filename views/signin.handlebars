@@ -1,19 +1,19 @@
 <!-- User Signin -->
 <div class="row" id="signInRow" data-aos="zoom-in-down">
     <div class="col-md-12">
-        <form>
-            <div class="form-group" id="signInForm">
-                <label for="exampleInputUserName"> User Name </label>
-                <input type="userName" class="form-control" id="exampleInputUserName" placeholder="Enter User Name">
+        <form id="signInForm">
+            <div class="form-group">
+                <label for="exampleInputUserName" id="userNameLabel">User Name </label>
+                <input type="userName" class="form-control" id="loginUserNameInput" placeholder="Enter User Name">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword"> Password </label>
-                <input type="password" class="form-control" id="exampleInputPassword" placeholder="Enter Password">
+                <label for="exampleInputPassword" id="passwordLabel"> Password </label>
+                <input type="password" class="form-control" id="loginPasswordInput" placeholder="Enter Password">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary"> Sign In </button>
+                <button type="signInSubmit" class="btn btn-primary"> Sign In </button>
                 <br>
-                <a href=""> Create New Account </a>
+                <a href="/api/users"> Create New Account </a>
             </div>
         </form>
     </div>
