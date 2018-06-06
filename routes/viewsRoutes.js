@@ -32,5 +32,16 @@ module.exports = function (app) {
             };
             res.render("challenges", obj);
         })
+    });
+    app.post("/challenges/insert", function (req, res) {
+        db.Recommendation.create(
+            {
+                challenge_task: req.body.challenge_task,
+                point_value: req.body.point_value
+            }
+        )(req.body, function(data) {
+            res.json(data)
+            // res.redirect("/challenges")
+        })
     })
 }

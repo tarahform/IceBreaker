@@ -2,12 +2,27 @@ var db = require("../models");
 
 module.exports = function (app) {
     console.log("****************");
-    
+    //get specific data from all users
+    //secure info hidden
+    app.get("/api/users/data/:columnName", function (req, res) {
+        if (req.params.columnName === "email" || req.params.columnName === "phone_number") {
+            res.json("Insufficient Permissions")
+            return;
+        }
+        db.User.findAll({
+            attributes: ["id", req.params.columnName]
+        }).then(function (data) {
+            console.log("======================");
+            console.log(data);
+            res.json(data);
+        });
+    });
+
     //get data from users table
     //add an id to get data specifically from that user
     //add an id and a column name to be even more specific
     app.get("/api/users/:id?/:columnName?", function (req, res) {
-        if (req.params.columnName === "email" || req.params.columnName === "phone_number"){
+        if (req.params.columnName === "email" || req.params.columnName === "phone_number") {
             res.json("Insufficient Permissions")
             return;
         }
@@ -15,7 +30,7 @@ module.exports = function (app) {
         console.log("PARAMS");
         console.log(req.params.id);
         if (req.params.id) {
-            queryParams.where = {id: req.params.id};
+            queryParams.where = { id: req.params.id };
         }
         if (req.params.columnName) {
             queryParams.attributes = ["id", req.params.columnName]
@@ -29,22 +44,7 @@ module.exports = function (app) {
         });
     });
     
-    //get specific data from all users
-    //secure info hidden
-    app.get("/api/users/data/:columnName", function (req, res) {
-        if (req.params.columnName === "email" || req.params.columnName === "phone_number"){
-            res.json("Insufficient Permissions")
-            return;
-        }
-        db.User.findAll({
-                attributes: ["id", req.params.columnName]
-        }).then(function (data) {
-            console.log("======================");
-            console.log(data);
-            res.json(data);
-        });
-    });
-    
+
     //post data to users table
     app.post("/api/users", function (req, res) {
         db.User.create({
@@ -77,6 +77,12 @@ module.exports = function (app) {
             challenge_task: req.body.challenge_task,
             point_value: req.body.point_value,
         }).then(function (data) {
+            res.json(data);
+        });
+    });
+
+    app.get("/api/recommendations", function (req, res) {
+        db.Recommendation.findAll({}).then(function (data) {
             res.json(data);
         });
     });

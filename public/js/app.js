@@ -80,6 +80,24 @@ $(document).ready(function () {
     //==========================================================================//
     // Logic - Functionality //
 
+    // On Submit for Creating a New Recommendation
+    $("#addChallenge").on("click", function (event) {
+        event.preventDefault();
+
+        var newRecommendation = {
+            challenge_task: $("#challengeRecommendationInput").val().trim(),
+            point_value: $("#pointValueInput").val().trim()
+        };
+
+        // Send POST Request
+        $.ajax("/challenges/insert", {
+            type: "POST",
+            data: newRecommendation
+        }).then(function () {
+            console.log("Created New Recommendation!")
+            location.reload();
+        });
+    });
 
 
     // End of Logic - Functionality //
