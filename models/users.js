@@ -33,7 +33,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.DATE,
             allowNull: false
         },
-        challeng_id: DataTypes.STRING,
+        challenge_id: DataTypes.STRING,
         user_points: DataTypes.INTEGER,
     });
     return User;
