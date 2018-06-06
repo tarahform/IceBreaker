@@ -71,15 +71,12 @@ $(document).ready(function () {
         });
         signin();
     }
-
-
-
     // End of Firebase Auth //
     //==========================================================================//
 
+
     //==========================================================================//
     // Logic - Functionality //
-
     // On Submit for Creating a New Recommendation
     $("#addChallenge").on("click", function (event) {
         event.preventDefault();
@@ -98,8 +95,6 @@ $(document).ready(function () {
             location.reload();
         });
     });
-
-
     // End of Logic - Functionality //
     //==========================================================================//
 });
