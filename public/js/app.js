@@ -81,7 +81,7 @@ $(document).ready(function () {
     //==========================================================================//
     // Logic - Functionality //
     // On Submit for Creating a New Recommendation
-    $("#addChallenge").on("click", function (event) {
+    $("#create-form").on("submit", function (event) {
         event.preventDefault();
 
         var newRecommendation = {

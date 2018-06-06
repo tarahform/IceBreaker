@@ -34,14 +34,8 @@ module.exports = function (app) {
         })
     });
     app.post("/challenges/insert", function (req, res) {
-        db.Recommendation.create(
-            {
-                challenge_task: req.body.challenge_task,
-                point_value: req.body.point_value
-            }
-        )(req.body, function(data) {
-            res.json(data)
-            // res.redirect("/challenges")
+        db.Recommendation.create(req.body).then(function (data) {
+            res.send(200).end();
         })
-    })
+    });
 }
