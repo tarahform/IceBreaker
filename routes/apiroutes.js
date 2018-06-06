@@ -28,11 +28,11 @@ module.exports = function (app) {
 
     //get user challenge_ids
     // app.get("api/users/challengeId", function(req, res){
-    //     db.User.findAll({
-    //         where: {
-
-    //         }
-    //     });
+    //     db.Challenge.findAll({
+    //         attributes: [challenge_id]
+    //     }).on('success', function (data) {
+    //         res.json(data);
+    //       });
     // });
 
     //get data from challenges table
@@ -51,6 +51,4 @@ module.exports = function (app) {
             res.json(data);
         });
     });
-
-
 }
