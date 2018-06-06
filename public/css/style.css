@@ -16,20 +16,18 @@ hr {
 .push {
   height: 50px;
 }
-#hero-image {
+#heroImgRow {
   max-width: 100%;
   max-height: auto;
 }
-.hero-image {
-  /* background-image: url("../img/views/shutterstock_551964289.jpg"); */
+#heroImg {
   height: 50%;   /* Set a specific height */
   background-position: center;  /* Position and center the image to scale nicely on all screens */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-.hero-text { /* Place text in the middle of the image */
-  text-align: center;
+#heroImgText { /* Place text in the middle of the image */
   position: absolute;
   top: 50%;
   left: 50%;
