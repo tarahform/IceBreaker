@@ -187,7 +187,6 @@ $("#signInSubmit").on("click", function (event) {
 $("#signInSubmit").on("click", function (event) {
     event.preventDefault()
     signin();
-
 })
 function signin() {
     var loginUserNameInput = $("#loginUserNameInput").val().trim();
@@ -211,5 +210,32 @@ function logout() {
         console.log(error);
     });
 }
+// create new user //
+function newUser() {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        $("#signUpSubmitBtn").on("click", function () {
+            var firstNameInput = $("#firstNameInput").val().trim();
+            var middleNameInput = $("#middleNameInput").val().trim();
+            var lastNameInput = $("#lastNameInput").val().trim();
+            var photoInput = $("#photoInput").val().trim();
+            var ageInput = $("#ageInput").val().trim();
+            var phoneInput = $("#phoneInput").val().trim();
+            var emailInput = $("#emailInput").val().trim();
+            var passwordInput = $("#passwordInput").val().trim();
+        })
+        // ...
+    });
+}
 // End of Firebase Auth //
+//==========================================================================//
+
+//==========================================================================//
+// Logic - Functionality //
+
+
+// End of Logic - Functionality //
 //==========================================================================//
