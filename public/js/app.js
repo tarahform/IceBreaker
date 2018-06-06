@@ -6,30 +6,14 @@ AOS.init();
 // Test Map with markers //
 var map;
 var markers = [];
-// function createMarker(location) {
-//     var marker = new google.maps.Marker({
-//         map: map,
-//         position: location.latlng,
-//         title: location.name,
-//         /*foursquare loop here*/
-//         animation: google.maps.Animation.DROP
-//     });
-//     var contentString = '<div id="content">' +
-//         '<div id="siteNotice">' +
-//         '</div>' +
-//         '<h1 id="firstHeading" class="firstHeading">' + /*foursquare loop here - name of place*/ + '</h1>' +
-//         '<div id="bodyContent">' +
-//         '<p><a href="LINKTOMENU">' + /*foursquare loop here*/Menu + '</a></p>' +
-//         '</div>' +
-//         '</div>';
-
-//     var infowindow = new google.maps.InfoWindow({
-//         content: contentString
-//     });
-
-//     marker.addListener('click', function () {
-//         infowindow.open(map, marker);
-//     });
+function createMarker(location) {
+    var marker = new google.maps.Marker({
+        map: map,
+        position: location.latlng,
+        title: location.name,
+        /*foursquare loop here*/
+        animation: google.maps.Animation.DROP
+    });
 
 function initMap() {
     var chicago = { lat: 41.8781, lng: -87.6298 };
