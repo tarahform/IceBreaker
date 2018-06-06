@@ -45,7 +45,7 @@ insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Priase an employee to their manager for a job well done.", 75, NOW(), NOW());
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
-values (" Buy a meal from wherever you are and give it away to someone in need.", 75, NOW(), NOW());
+values ("Buy a meal from wherever you are and give it away to someone in need.", 75, NOW(), NOW());
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Leave money in a donation jar, if the location has one.", 50, NOW(), NOW());
