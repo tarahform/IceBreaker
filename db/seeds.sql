@@ -45,7 +45,7 @@ insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Priase an employee to their manager for a job well done.", 75, NOW(), NOW());
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
-values (" Buy a meal from wherever you are and give it away to someone in need.", 75, NOW(), NOW());
+values ("Buy a meal from wherever you are and give it away to someone in need.", 75, NOW(), NOW());
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Leave money in a donation jar, if the location has one.", 50, NOW(), NOW());
@@ -58,3 +58,10 @@ values ("Ask someone three questions and exchange LinkedIn information to networ
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Challenge someone to the game 'Two Truths and A Lie'.", 75, NOW(), NOW());
+
+-- recommendation data
+insert into recommendations (challenge_task, point_value, createdAt, updatedAt)
+values ("Offer your cashier a high five.", 100, NOW(), NOW());
+
+insert into recommendations (challenge_task, point_value, createdAt, updatedAt)
+values ("Intoduce yourself to someone next to you.", 75, NOW(), NOW());
