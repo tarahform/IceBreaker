@@ -6,16 +6,37 @@ body {
    padding:0;
    height:100%;
 }
-.container {
-  margin:0;
-  padding:0;
-  min-height:100%;
-  position:relative;
-}
 #homePage {
-  max-width: 100%;
-  height: auto;
-  background: url("../img/views/shutterstock_551964289.jpg") no-repeat;
+  background-image: url("../img/views/shutterstock_551964289.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 100%;
+}
+#heroImgRow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+#h1HeroImgText {
+  font-size: 50pt;
+  font-weight: bold;
+}
+#pHeroImgText{
+  font-size: 25pt;
+}
+#heroImgText {
+  color: white;
+  display: block;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /*end of standard page style*/
 /* ============================================== */
