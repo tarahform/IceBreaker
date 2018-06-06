@@ -190,8 +190,8 @@ $("#signInSubmit").on("click", function (event) {
 
 })
 function signin() {
-    var loginUserNameInput = $("#emailInputModal").val().trim();
-    var passwordInput = $("#oginPasswordInput").val().trim();
+    var loginUserNameInput = $("#loginUserNameInput").val().trim();
+    var passwordInput = $("#loginPasswordInput").val().trim();
     // console.log("Before signin", emailInput);
 
     firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput)
