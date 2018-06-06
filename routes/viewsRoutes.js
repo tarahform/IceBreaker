@@ -33,15 +33,15 @@ module.exports = function (app) {
             res.render("challenges", obj);
         })
     });
-    app.put("/challenges/insert", function (req, res) {
-
+    app.post("/challenges/insert", function (req, res) {
         db.Recommendation.create(
             {
                 challenge_task: req.body.challenge_task,
                 point_value: req.body.point_value
             }
         )(req.body, function(data) {
-            res.redirect("/challenges")
+            res.json(data)
+            // res.redirect("/challenges")
         })
     })
 }
