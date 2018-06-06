@@ -39,7 +39,7 @@ hr {
 /* ============================================== */
 /* Nav Bar */
 nav {
-  margin-bottom: 10px;
+  padding: 20px 40px 0px 40px;
 }
 #logo {
   float: left;
