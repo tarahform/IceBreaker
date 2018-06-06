@@ -210,9 +210,10 @@ function newUser() {
             console.log("Successfully created user account with uid:", userData.uid);
         }
     });
+    signin();
 }
-signin();
-});
+
+
 
 // End of Firebase Auth //
 //==========================================================================//
