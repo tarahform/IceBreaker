@@ -6,7 +6,7 @@ use icebreakers_db;
 create table users(
     id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(255) NOT NULL,
-    middle_name VARCHAR(255),
+    middle_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     photo_link VARCHAR(255),
     email VARCHAR(255) NOT NULL,
