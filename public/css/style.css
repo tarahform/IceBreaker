@@ -16,8 +16,12 @@ hr {
 .push {
   height: 50px;
 }
+#hero-image {
+  max-width: 100%;
+  max-height: auto;
+}
 .hero-image {
-  background-image: url("../img/views/shutterstock_551964289.jpg");
+  /* background-image: url("../img/views/shutterstock_551964289.jpg"); */
   height: 50%;   /* Set a specific height */
   background-position: center;  /* Position and center the image to scale nicely on all screens */
   background-repeat: no-repeat;
