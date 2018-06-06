@@ -58,3 +58,10 @@ values ("Ask someone three questions and exchange LinkedIn information to networ
 
 insert into challenges (challenge_task, point_value, createdAt, updatedAt)
 values ("Challenge someone to the game 'Two Truths and A Lie'.", 75, NOW(), NOW());
+
+-- recommendation data
+insert into recommendations (challenge_task, point_value, createdAt, updatedAt)
+values ("Offer your cashier a high five.", 100, NOW(), NOW());
+
+insert into recommendations (challenge_task, point_value, createdAt, updatedAt)
+values ("Intoduce yourself to someone next to you.", 75, NOW(), NOW());

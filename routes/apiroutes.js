@@ -72,7 +72,7 @@ module.exports = function (app) {
     });
 
     //post data to challenges table
-    app.post("/api/users", function (req, res) {
+    app.post("/api/challenges", function (req, res) {
         db.Challenge.create({
             challenge_task: req.body.challenge_task,
             point_value: req.body.point_value,

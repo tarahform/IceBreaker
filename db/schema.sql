@@ -24,3 +24,10 @@ create table challenges(
     point_value INT NOT NULL,
 	primary key (id)
 );
+
+create table recommendations(
+    id INT NOT NULL AUTO_INCREMENT,
+    challenge_task VARCHAR(255) NOT NULL,
+    point_value INT NOT NULL,
+    primary key (id)
+);
