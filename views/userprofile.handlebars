@@ -1,3 +1,4 @@
+<!-- User Profile -->
 <div class="row" id="userProfileRow">
     <div class="col-md-12">
         <div class="my-progress-bar"></div>
@@ -15,12 +16,22 @@
             </ul>
         </div>
     </div>
-    <!--Map-->
-    <div id="mapFloatingPanel">
-        <input onclick="clearMarkers();" type="button" value="Hide Markers">
-        <input onclick="showMarkers();" type="button" value="Show All Markers">
-        <input onclick="deleteMarkers();" type="button" value="Delete Markers">
-    </div>
-    <div id="map"></div>
-    <!--End of Map-->
 </div>
+<!--End of User Profile-->
+
+<hr>
+
+<!--Map-->
+<div class="row" id="mapBtnRow">
+    <div class="col-md-12" id="mapFloatingPanel">
+        <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+        <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+        <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    </div>
+</div>
+<div class="row" id="mapRow">
+    <div class="col-md-12" id="mapCol">
+        <div id="map"></div>
+    </div>
+</div>
+<!--End of Map-->

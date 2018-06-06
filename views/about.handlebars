@@ -1,22 +1,12 @@
 <!-- About Section -->
 <div class="row text-center" id="aboutBodyRow">
-    <div class="col-md-4" id="mission">
+    <div class="col-md-6" id="mission">
         <h1>Mission Statement</h1>
         <p>Here at Ice Breaker, we focus on inspiring and promoting sociability and kindness in the world. We all need a pick-me-up
             sometimes, amiright? So we partnered with your local coffee shops to give you more incentive to complete a kind
             act, to bring yourself out of your comfort zone, and to socialize in a way you may not have before.</p>
     </div>
-    <!--Map-->
-    <div class="col-md-4">
-        <div id="mapFloatingPanel">
-            <input onclick="clearMarkers();" type="button" value="Hide Markers">
-            <input onclick="showMarkers();" type="button" value="Show All Markers">
-            <input onclick="deleteMarkers();" type="button" value="Delete Markers">
-        </div>
-        <div id="map"></div>
-    </div>
-    <!--End of Map-->
-    <div class="col-md-4" id="about">
+    <div class="col-md-6" id="about">
         <h1>How It Works</h1>
         <p>Create a profile.
             <br> Search for local coffee shops in your area.
@@ -27,6 +17,21 @@
         </p>
     </div>
 </div>
+<hr>
+<!--Map-->
+<div class="row" id="mapBtnRow">
+    <div class="col-md-12" id="mapFloatingPanel">
+        <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+        <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+        <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    </div>
+</div>
+<div class="row" id="mapRow">
+    <div class="col-md-12" id="mapCol">
+        <div id="map"></div>
+    </div>
+</div>
+<!--End of Map-->
 <hr>
 <!--IceBreaker Developers-->
 <div class="row" id="developers">
