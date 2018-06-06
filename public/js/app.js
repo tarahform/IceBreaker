@@ -219,13 +219,6 @@ function newUser() {
 
         $("#signUpSubmitBtn").on("click", function () {
             var createUserNameInput = $("#createUserNameInput").val().trim();
-            var firstNameInput = $("#firstNameInput").val().trim();
-            var middleNameInput = $("#middleNameInput").val().trim();
-            var lastNameInput = $("#lastNameInput").val().trim();
-            var photoInput = $("#photoInput").val().trim();
-            var ageInput = $("#ageInput").val().trim();
-            var phoneInput = $("#phoneInput").val().trim();
-            var emailInput = $("#emailInput").val().trim();
             var passwordInput = $("#passwordInput").val().trim();
         })
         // ...
@@ -237,6 +230,7 @@ function newUser() {
 
 //==========================================================================//
 // Logic - Functionality //
+
 
 
 // End of Logic - Functionality //
