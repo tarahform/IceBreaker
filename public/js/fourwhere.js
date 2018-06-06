@@ -6,10 +6,18 @@ function createMarkers(features) {
     features.forEach(feature => {
         var marker = new google.maps.Marker({
             position: feature.position,
-            map: map
+            map: map,
+            animation: google.maps.Animation.DROP,
         });
         markers.push(marker);
     });
+}
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
 }
 
 function initMap() {
