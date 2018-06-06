@@ -44,7 +44,6 @@ module.exports = function (app) {
         });
     });
     
-
     //post data to users table
     app.post("/api/users", function (req, res) {
         db.User.create({
