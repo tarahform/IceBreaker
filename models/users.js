@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         middle_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         last_name: {
             type: DataTypes.STRING,
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         phone_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             validate: {
                 len: [10]
             }
@@ -26,12 +26,8 @@ module.exports = function (sequelize, DataTypes) {
         age: {
             type: DataTypes.INTEGER,
             validate: {
-                len: [3]
+                len: [1,3]
             }
-        },
-        member_since: {
-            type: DataTypes.DATE,
-            allowNull: false
         },
         challenge_id: DataTypes.STRING,
         user_points: DataTypes.INTEGER,
