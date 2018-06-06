@@ -157,3 +157,59 @@ var progress_circle = $(".my-progress-bar").gmpc({
 })
 // end progress bar //
 //==========================================================================//
+
+//==========================================================================//
+// Firebase Auth //
+var loggedIn = false;
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        console.log("signed in: " + user.email);
+        loggedIn = true;
+        // User is signed in.
+    } else {
+        // No user is signed in.
+        console.log("User has been signed out")
+        loggedIn = false;
+    }
+});
+$("#signInSubmit").on("click", function (event) {
+    event.preventDefault()
+    // console.log("Clicked");
+    var user = firebase.auth().currentUser;
+    if (loggedIn === true) {
+        logout();
+    } else {
+
+    }
+});
+
+$("#signInSubmit").on("click", function (event) {
+    event.preventDefault()
+    signin();
+
+})
+function signin() {
+    var loginUserNameInput = $("#emailInputModal").val().trim();
+    var passwordInput = $("#oginPasswordInput").val().trim();
+    // console.log("Before signin", emailInput);
+
+    firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput)
+        .then(function (user) {
+            console.log(user);
+        })
+        .catch(function (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // console.log("error: " + errorMessage);
+        });
+}
+function logout() {
+    firebase.auth().signOut().then(function () {
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+}
+
+});
