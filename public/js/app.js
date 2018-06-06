@@ -218,6 +218,7 @@ function newUser() {
         var errorMessage = error.message;
 
         $("#signUpSubmitBtn").on("click", function () {
+            var createUserNameInput = $("#createUserNameInput").val().trim();
             var firstNameInput = $("#firstNameInput").val().trim();
             var middleNameInput = $("#middleNameInput").val().trim();
             var lastNameInput = $("#lastNameInput").val().trim();

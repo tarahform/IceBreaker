@@ -9,6 +9,10 @@ module.exports = function (app) {
         var obj = {};
         res.render("about", obj);
     });
+    app.get("/home", function (req, res) {
+        var obj = {};
+        res.render("home", obj);
+    });
     app.get("/signin", function (req, res) {
         var obj = {};
         res.render("signin", obj);
