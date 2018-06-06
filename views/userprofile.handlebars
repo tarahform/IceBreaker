@@ -1,37 +1,41 @@
-<!-- User Profile -->
-<div class="row" id="userProfileRow">
-    <div class="col-md-12">
-        <div class="my-progress-bar"></div>
-    </div>
-</div>
-<hr>
-<div class="row" id="userProfileRow">
-    <div class="col-md-6" id="userProfile" class="media">
-        <img id="userPicture" class="align-self-center mr-3" src="../public/img/users/gollum350x350.jpg" alt="Avatar">
-        <div class="media-body">
-            <ul id="userInfo">
-                <p id="userName">Name: </p>
-                <p id="userEmail">Email: </p>
-                <p id="userPoints">Points: </p>
-            </ul>
+<div class="container-fluid" id="userProfilePage">
+    <hr>
+    <!-- User Profile -->
+    <div class="row" id="userProfileRow">
+        <div class="col-md-12">
+            <div class="my-progress-bar"></div>
         </div>
     </div>
-</div>
-<!--End of User Profile-->
-
-<hr>
-
-<!--Map-->
-<div class="row" id="mapBtnRow" data-aos="fade-right">
-    <div class="col-md-12" id="mapFloatingPanel">
-        <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
-        <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
-        <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    <hr>
+    <div class="row" id="userProfileRow">
+        <div class="col-md-6" id="userProfile" class="media">
+            <img id="userPicture" class="align-self-center mr-3" src="../public/img/users/gollum350x350.jpg" alt="Avatar">
+            <div class="media-body">
+                <ul id="userInfo">
+                    <p id="userName">Name: </p>
+                    <p id="userEmail">Email: </p>
+                    <p id="userPoints">Points: </p>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row" id="mapRow" data-aos="fade-left">
-    <div class="col-md-12" id="mapCol">
-        <div id="map"></div>
+    <!--End of User Profile-->
+
+    <hr>
+
+    <!--Map-->
+    <div class="row" id="mapBtnRow" data-aos="fade-right">
+        <div class="col-md-12" id="mapFloatingPanel">
+            <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+            <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+            <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+        </div>
     </div>
+    <div class="row" id="mapRow" data-aos="fade-left">
+        <div class="col-md-12" id="mapCol">
+            <div id="map"></div>
+        </div>
+    </div>
+    <!--End of Map-->
+    <hr>
 </div>
-<!--End of Map-->
