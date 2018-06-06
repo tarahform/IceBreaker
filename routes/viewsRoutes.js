@@ -1,3 +1,5 @@
+var db = require("../models");
+
 module.exports = function (app) {
     app.get("/", function (req, res) {
         var obj = {};
@@ -6,6 +8,10 @@ module.exports = function (app) {
     app.get("/about", function (req, res) {
         var obj = {};
         res.render("about", obj);
+    });
+    app.get("/home", function (req, res) {
+        var obj = {};
+        res.render("home", obj);
     });
     app.get("/signin", function (req, res) {
         var obj = {};
@@ -19,4 +25,12 @@ module.exports = function (app) {
         var obj = {};
         res.render("userprofile", obj);
     });
+    app.get("/challenges", function (req, res) {
+        db.Challenge.findAll({}).then(data => {
+            var obj = {
+                challenge: data
+            };
+            res.render("challenges", obj);
+        })
+    })
 }

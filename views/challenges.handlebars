@@ -1,0 +1,51 @@
+<!-- USER CHALLENGES -->
+<h1> Have You Completed Your Challenges? Please Get To It!</h1>
+<br/>
+<div id="accordion">
+
+    {{#each challenge}}
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapse{{this.id}}" data-challenge="{{this.id}}" aria-expanded="true">
+                CHALLENEGE {{this.id}} </a>
+        </div>
+        <div id="collapse{{this.id}}" data-parent="#accordion" class="collapse">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="card-text temp-text"> {{this.challenge_task}} </p>
+                        <p class="card-text temp-text"> {{this.point_value}} </p>
+                    </div>
+                </div>
+                <div class="btn btn-info challengeCompleteButton" data-challengeName="Windsor">
+                    <h3> Complete Challenge </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+</div>
+<!-- END USER CHALLENGES -->
+
+<br/>
+<br/>
+
+<!-- USER CHALLENEGE RECOMMENDATION -->
+<div class="row">
+    <div class="col-md-12">
+        <h1> Do You Have A Recommendation For A Challenge?</h1>
+        <form id="create-form">
+            <div class="form-group">
+                <label for="name" id="challengeRecommendationLabel">Enter New Challenge Recommendation</label>
+                <input type="name" class="form-control" id="challengeRecommendationInput" rows="1" placeholder="Enter Recommendation Here">
+            </div>
+            <div class="form-group">
+                <label for="name" id="pointValueLabel">Enter Point Value</label>
+                <input type="name" class="form-control" id="pointValueInput" rows="1" placeholder="Enter 50, 75, or 100">
+            </div>
+            <button type="submit" class="btn btn-success" id="addTask"> Submit Challenge Recommendation </button>
+        </form>
+    </div>
+</div>
+<!-- END OF USER CHALLENEGE RECOMMENDATION -->
