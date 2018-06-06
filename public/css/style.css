@@ -6,32 +6,37 @@ body {
    padding:0;
    height:100%;
 }
-.container {
-min-height:100%;
-position:relative;
-}
-hr {
-  margin:50px 0; 
-}
-.push {
-  height: 50px;
-}
-.hero-image {
+#homePage {
   background-image: url("../img/views/shutterstock_551964289.jpg");
-  height: 50%;   /* Set a specific height */
-  background-position: center;  /* Position and center the image to scale nicely on all screens */
-  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 100%;
 }
-.hero-text { /* Place text in the middle of the image */
-  text-align: center;
+#heroImgRow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+#h1HeroImgText {
+  font-size: 50pt;
+  font-weight: bold;
+}
+#pHeroImgText{
+  font-size: 25pt;
+}
+#heroImgText {
+  color: white;
+  display: block;
+}
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
 }
 /*end of standard page style*/
 /* ============================================== */
