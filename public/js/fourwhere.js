@@ -6,7 +6,6 @@ function createMarkers(features) {
     features.forEach(feature => {
         var marker = new google.maps.Marker({
             position: feature.position,
-            icon: icons[feature.type].icon,
             map: map
         });
         markers.push(marker);
@@ -68,8 +67,8 @@ var breweryId = "50327c8591d4c4b30a586d5d";
 
 // FORSQUARE API
 function getFromFourSquare(categoryId) {
-    var clientID = "ROUJL50N3DXNBVUDYAG03BYSF4B5PYET4WWJNIQ0DGR5NOOK";
-    var clientSecret = "QBHVY35QQRVBP21GIYVDOWFPCGPXIEF504L0DT1G3E0JJAPR";
+    var clientID = "TRLYPN3LXDOCRD45MYN3W4T4GEISSM0IKUVDKRIVB3KIMPYI";
+    var clientSecret = "1DCSTIV3F5EUKJTXDTCCFLZSLP4QROJ5RHI5PNAK2EKRJ5WV";
     var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
         + "&client_id=" + clientID + "&client_secret=" + clientSecret
         + "&v=20180604" + "&categoryId=" + categoryId;
