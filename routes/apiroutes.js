@@ -4,7 +4,13 @@ module.exports = function (app) {
     console.log("****************");
     
     //get data from users table
+    //add an id to get data specifically from that user
+    //add an id and a column name to be even more specific
     app.get("/api/users/:id?/:columnName?", function (req, res) {
+        if (req.params.columnName === "email" || req.params.columnName === "phone_number"){
+            res.json("Insufficient Permissions")
+            return;
+        }
         var queryParams = {};
         console.log("PARAMS");
         console.log(req.params.id);
@@ -16,14 +22,22 @@ module.exports = function (app) {
         }
         console.log(queryParams);
         db.User.findAll(queryParams).then(function (data) {
+            //hides secure information from client side api
+            data[0].email = undefined;
+            data[0].phone_number = undefined;
             res.json(data);
         });
     });
-
+    
     //get specific data from all users
-    app.get("/api/users/:columnName?", function (req, res) {
+    //secure info hidden
+    app.get("/api/users/data/:columnName", function (req, res) {
+        if (req.params.columnName === "email" || req.params.columnName === "phone_number"){
+            res.json("Insufficient Permissions")
+            return;
+        }
         db.User.findAll({
-            attributes: req.params.columnName
+                attributes: ["id", req.params.columnName]
         }).then(function (data) {
             console.log("======================");
             console.log(data);
