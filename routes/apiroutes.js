@@ -1,13 +1,36 @@
 var db = require("../models");
 
 module.exports = function (app) {
+    console.log("****************");
+    
     //get data from users table
-    app.get("/api/users", function (req, res) {
-        db.User.findAll({}).then(function (data) {
+    app.get("/api/users/:id?/:columnName?", function (req, res) {
+        var queryParams = {};
+        console.log("PARAMS");
+        console.log(req.params.id);
+        if (req.params.id) {
+            queryParams.where = {id: req.params.id};
+        }
+        if (req.params.columnName) {
+            queryParams.attributes = ["id", req.params.columnName]
+        }
+        console.log(queryParams);
+        db.User.findAll(queryParams).then(function (data) {
             res.json(data);
         });
     });
 
+    //get specific data from all users
+    app.get("/api/users/:columnName?", function (req, res) {
+        db.User.findAll({
+            attributes: req.params.columnName
+        }).then(function (data) {
+            console.log("======================");
+            console.log(data);
+            res.json(data);
+        });
+    });
+    
     //post data to users table
     app.post("/api/users", function (req, res) {
         db.User.create({
@@ -26,14 +49,6 @@ module.exports = function (app) {
         });
     });
 
-    //get user challenge_ids
-    // app.get("api/users/challengeId", function(req, res){
-    //     db.Challenge.findAll({
-    //         attributes: [challenge_id]
-    //     }).on('success', function (data) {
-    //         res.json(data);
-    //       });
-    // });
 
     //get data from challenges table
     app.get("/api/challenges", function (req, res) {
@@ -44,7 +59,7 @@ module.exports = function (app) {
 
     //post data to challenges table
     app.post("/api/users", function (req, res) {
-        db.User.create({
+        db.Challenge.create({
             challenge_task: req.body.challenge_task,
             point_value: req.body.point_value,
         }).then(function (data) {
