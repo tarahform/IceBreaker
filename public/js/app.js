@@ -229,6 +229,7 @@ function newUser() {
             var passwordInput = $("#passwordInput").val().trim();
         })
         // ...
+        signin();
     });
 }
 // End of Firebase Auth //
