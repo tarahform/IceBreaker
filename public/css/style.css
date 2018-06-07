@@ -219,6 +219,13 @@ footer {
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: light;
+  line-height: 1.8;
+}
+#missonDiv {
+  padding: 50px, 0, 0, 0;
+}
+#aboutDiv {
+  padding: 50px, 0, 0, 0;
 }
 /*End of About Page*/
 /* ============================================== */
