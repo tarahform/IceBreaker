@@ -199,6 +199,10 @@ footer {
 
 /* ============================================== */
 /*SignUpPage*/
+#signupPage {
+  padding-left: 30%;
+  padding-right: 20%;
+}
 #photolabelP {
   font-size:8pt;
   color:gray;
