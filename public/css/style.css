@@ -195,7 +195,7 @@ footer {
 /*SignUpPage*/
 #signupPage {
   padding-left: 30%;
-  padding-right: 20%;
+  padding-right: 30%;
 }
 #photolabelP {
   font-size:8pt;
@@ -206,9 +206,9 @@ footer {
 
 /* ============================================== */
 /*login Page*/
-#igninPage {
+#signinPage {
   padding-left: 30%;
-  padding-right: 20%;
+  padding-right: 30%;
 }
 /*End of login Page*/
 /* ============================================== */
