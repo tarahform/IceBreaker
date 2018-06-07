@@ -217,11 +217,9 @@ p {
   font-weight: light;
   line-height: 1.8;
 }
-#missonDiv {
-  padding: 0, 20%, 50px, 20%;
-}
-#aboutDiv {
-  padding: 50px, 20%, 0, 20%;
+#missionRow {
+  margin: 20%, 20%, 20%, 20%;
+  padding: 20%, 20%, 20%, 20%;
 }
 /*End of About Page*/
 /* ============================================== */
