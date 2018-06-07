@@ -9,9 +9,19 @@ function createMarkers(features) {
             map: map,
             animation: google.maps.Animation.DROP,
         });
+        var infowindow = new google.maps.InfoWindow({
+            content: `<div><p id="checkInBtnText">${feature.name}</p><hr><button type="button" class="btn btn-primary" id="checkInBtn">Check In</button></div>`
+        })
+        marker.addListener("click", function () {
+            infowindow.open(map, marker)
+        })
         markers.push(marker);
     });
 }
+$(document).on("click", "#checkInBtn", function () {
+    window.location.href = "/challenges";
+    // console.log(window.location);
+});
 function toggleBounce() {
     if (marker.getAnimation() !== null) {
         marker.setAnimation(null);
@@ -19,7 +29,6 @@ function toggleBounce() {
         marker.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
-
 function initMap() {
     var chicago = { lat: 41.8781, lng: -87.6298 };
 
