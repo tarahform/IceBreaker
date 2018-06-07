@@ -38,8 +38,8 @@ module.exports = function (app) {
         console.log(queryParams);
         db.User.findAll(queryParams).then(function (data) {
             //hides secure information from client side api
-            data[0].email = undefined;
-            data[0].phone_number = undefined;
+            // data[0].email = undefined;
+            // data[0].phone_number = undefined;
             res.json(data);
         });
     });

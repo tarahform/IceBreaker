@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     //==========================================================================//
     // Firebase Auth //
-
+    // console.log('app.js linked');
     $("#signUpForm").on("submit", function (event) {
         event.preventDefault();
         var newUser = {
@@ -20,9 +20,8 @@ $(document).ready(function () {
             challenge_id: "[]",
             user_points: 0
         }
-        var userName = $("#createUserNameInput").val().trim();
         var password = $("#passwordInput").val().trim();
-        // console.log(newUser);
+        console.log(newUser);
 
         firebase.auth().createUserWithEmailAndPassword(newUser.email, password)
             .then(function () {
@@ -34,6 +33,7 @@ $(document).ready(function () {
                 })
             }).then(function (res) {
                 console.log("Response", res);
+                window.location.href = "/userprofile";
             }).catch(function (error) {
                 // Handle Errors here.
                 var errorCode = error.code;

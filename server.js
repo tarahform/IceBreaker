@@ -18,7 +18,7 @@ require("./routes/apiroutes")(app);
 require("./routes/viewsRoutes")(app);
 
 // place -> {force: true} to test - take out before push to master
-db.sequelize.sync().then(function () {
+db.sequelize.sync({force: true}).then(function () {
     console.log("DATABASE IS CONNECTED!");
     app.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
