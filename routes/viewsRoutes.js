@@ -30,6 +30,7 @@ module.exports = function (app) {
             var obj = {
                 challenge: data
             };
+            console.log(data[0]);
             res.render("challenges", obj);
         })
     });

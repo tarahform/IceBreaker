@@ -101,7 +101,7 @@ $(document).ready(function () {
     // If Already Complete, Notify Already Done
     $("#complete").on("click", function () {
 
-        $.ajax("/api/users/1", {
+        $.ajax("/api/users/" + currentUser.email, {
             type: "GET"
         }).then(function (data) {
             console.log(data)
@@ -136,7 +136,7 @@ $(document).ready(function () {
             }
         }).then(function (data) {
             if (data) {
-                return $.ajax("/api/users/1", {
+                return $.ajax("/api/users/" + currentUser.email, {
                     type: "PUT",
                     data: data
                 })
@@ -146,6 +146,7 @@ $(document).ready(function () {
         }).then(function (data) {
             if (data) {
                 console.log("changed array to: ", data);
+                window.location.href = "/userprofile";
             } else {
                 console.log("you've already completed this challenge")
                 alert("You have already completed this challenge!")

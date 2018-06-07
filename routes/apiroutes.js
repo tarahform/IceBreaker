@@ -87,7 +87,7 @@ module.exports = function (app) {
         });
     });
 
-    app.put("/api/users/:id", function (req, res) {
+    app.put("/api/users/:email", function (req, res) {
         console.log("req.body", req.body)
         db.User.update(
             {
@@ -96,7 +96,7 @@ module.exports = function (app) {
             },
             {
                 where: {
-                    id: req.params.id
+                    email: req.params.email
                 }
             }
         ).then(function (data) {
