@@ -1,39 +1,47 @@
 <div class="container-fluid" id="userProfilePage">
-    <hr>
     <!-- User Profile -->
-    <div class="row" id="userProfileRow">
+    <div class="row" id="userProfileRow1">
         <div class="col-md-12">
-            <div class="my-progress-bar"></div>
+            <div class="pointsProgressBar"></div>
         </div>
     </div>
     <hr>
-    <div class="row" id="userProfileRow">
-        <div class="col-md-6" id="userProfile" class="media">
-            <img id="userPicture" class="align-self-center mr-3" src="../public/img/users/gollum350x350.jpg" alt="Avatar">
-            <div class="media-body">
-                <ul id="userInfo">
-                    <p id="userName">Name: </p>
-                    <p id="userEmail">Email: </p>
-                    <p id="userPoints">Points: </p>
-                </ul>
+    <div class="row" id="userProfileRow2">
+        <div class="col-md-6 border-0 aos-item" id="userProfileColLeft" data-aos="flip-down">
+            <div class="card border-0" id="userPictureDiv">
+                <div class="card-body border-0" id="userProfilePhotoCard">
+                    <img src="../img/users/gollum350x350.jpg" alt="Avatar" class="image img-fluid rounded-circle" id="userPicture">
+                </div>
+                <div class="overlay border-0" id="userOverlay">
+                    <div class="userProfilePhotoBtn">
+                        <button type="button" class="btn btn-secondary" id="userProfilePhotoBtn">Update Image</button>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="col-md-6 media-body" id="userProfileColRight" data-aos="flip-up">
+            <ul id="userInfo">
+                <p id="userName">Name: </p>
+                <p id="userEmail">Email: </p>
+                <p id="userPoints">Points: </p>
+                <a class="link" href="/challenges">View Challenges</a>
+            </ul>
         </div>
     </div>
     <!--End of User Profile-->
-
     <hr>
-
     <!--Map-->
-    <div class="row" id="mapBtnRow" data-aos="fade-right">
-        <div class="col-md-12" id="mapFloatingPanel">
-            <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
-            <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
-            <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    <div class="container-fluid" id="mapContainer">
+        <div class="row" id="mapBtnRow" data-aos="fade-right">
+            <div class="col-md-12" id="mapFloatingPanel">
+                <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+                <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+            </div>
         </div>
-    </div>
-    <div class="row" id="mapRow" data-aos="fade-left">
-        <div class="col-md-12" id="mapCol">
-            <div id="map"></div>
+        <div class="row" id="mapRow" data-aos="fade-left">
+            <div class="col-md-12" id="mapCol">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
     <!--End of Map-->

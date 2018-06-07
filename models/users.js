@@ -1,5 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         first_name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -12,10 +16,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        photo_link: DataTypes.STRING,
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
+        age: {
+            type: DataTypes.INTEGER,
+            validate: {
+                len: [1,3]
+            }
         },
         phone_number: {
             type: DataTypes.STRING,
@@ -23,11 +28,13 @@ module.exports = function (sequelize, DataTypes) {
                 len: [10]
             }
         },
-        age: {
-            type: DataTypes.INTEGER,
-            validate: {
-                len: [1,3]
-            }
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         challenge_id: DataTypes.STRING,
         user_points: DataTypes.INTEGER,

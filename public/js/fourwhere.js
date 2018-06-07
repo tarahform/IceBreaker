@@ -6,12 +6,29 @@ function createMarkers(features) {
     features.forEach(feature => {
         var marker = new google.maps.Marker({
             position: feature.position,
-            map: map
+            map: map,
+            animation: google.maps.Animation.DROP,
         });
+        var infowindow = new google.maps.InfoWindow({
+            content: `<div><p id="checkInBtnText">${feature.name}</p><hr><button type="button" class="btn btn-primary" id="checkInBtn">Check In</button></div>`
+        })
+        marker.addListener("click", function () {
+            infowindow.open(map, marker)
+        })
         markers.push(marker);
     });
 }
-
+$(document).on("click", "#checkInBtn", function () {
+    window.location.href = "/challenges";
+    // console.log(window.location);
+});
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+}
 function initMap() {
     var chicago = { lat: 41.8781, lng: -87.6298 };
 
@@ -49,11 +66,6 @@ function clearMarkers() {
 // Shows any markers currently in the array.
 function showMarkers() {
     setMapOnAll(map);
-}
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers() {
-    clearMarkers();
-    markers = [];
 }
 
 // Test Map with markers //

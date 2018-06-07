@@ -80,6 +80,7 @@ module.exports = function (app) {
         });
     });
 
+    //get data from recommendations table
     app.get("/api/recommendations", function (req, res) {
         db.Recommendation.findAll({}).then(function (data) {
             res.json(data);
