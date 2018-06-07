@@ -1,4 +1,4 @@
-use icebreakers_db;
+use u1zxy2zsiobvmeyu;
 
 -- users tabledata
 insert into users (first_name, middle_name, last_name, photo_link, email, phone_number, age, challenge_id, user_points, createdAt, updatedAt)

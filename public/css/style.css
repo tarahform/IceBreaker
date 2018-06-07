@@ -23,10 +23,12 @@ body {
 }
 #h1HeroImgText {
   font-size: 50pt;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 #pHeroImgText{
   font-size: 25pt;
+  font-family: 'Montserrat', sans-serif;
 }
 #heroImgText {
   color: white;
@@ -132,22 +134,19 @@ footer {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: white;
+  background-color: #0860AC;
 }
 .developer-image:hover .overlay {
   opacity: 1;
 }
-.devtext {
-  color: black;
-  font-size: 12px;
+#devText {
+  color: white;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-.developers {
   text-align: center;
 }
 /*end of dev section overlay image */
@@ -165,7 +164,7 @@ footer {
   max-width: 300px;
   height: auto;
 }
-.overlay {
+#userOverlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -178,7 +177,7 @@ footer {
   background-color: white;
   border: none;
 }
-#userPictureDiv:hover .overlay {
+#userPictureDiv:hover #userOverlay {
   opacity: 1;
   border: none;
 }
@@ -210,6 +209,23 @@ footer {
 /*End of SignUpPage*/
 /* ============================================== */
 
-
-
-
+/* ============================================== */
+/*About Page*/
+#aboutPageh1 {
+  color: #0860AC;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light;
+  line-height: 1.8;
+}
+#missonDiv {
+  padding: 50px, 0, 0, 0;
+}
+#aboutDiv {
+  padding: 50px, 0, 0, 0;
+}
+/*End of About Page*/
+/* ============================================== */
