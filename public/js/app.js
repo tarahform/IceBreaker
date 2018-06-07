@@ -7,6 +7,16 @@ $(document).ready(function () {
 
     //==========================================================================//
     // Firebase Auth //
+
+    // //this code creates and signs in a user everytime the app is run
+    // console.log("test user");
+
+    // const email = "testUser2@gmail.com";
+    // const pass = "testUser2"
+    // const auth = firebase.auth();
+    // const promise = firebase.auth().createUserWithEmailAndPassword(email, pass);
+    // promise.catch(e => console.log(e.message));
+
     var loggedIn = false;
 
     firebase.auth().onAuthStateChanged(function (user) {
