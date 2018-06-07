@@ -14,11 +14,14 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
+                            <p id="challengesP"> Challenge: </p>
                             <p class="card-text temp-text"> {{this.challenge_task}} </p>
+                            <p id="challengesPointsP">Points: </p>
                             <p class="card-text temp-text"> {{this.point_value}} </p>
                         </div>
                     </div>
-                    <button class="btn btn-info challengeCompleteButton" data-toggle="modal" data-target="#completeChallengeModal" data-id={{this.id}} data-point_value={{this.point_value}}>
+                    <button class="btn btn-info challengeCompleteButton" data-toggle="modal" data-target="#completeChallengeModal" data-id={{this.id}}
+                        data-point_value={{this.point_value}}>
                         <h3> Complete Challenge </h3>
                     </button>
                 </div>
@@ -53,23 +56,28 @@
 <!-- END OF USER CHALLENEGE RECOMMENDATION -->
 
 <!-- MODAL TO HIDE CHALLENGE AND REDIRECT USER TO PROFILE-->
-<div id="completeChallengeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="completeChallengeModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="completeChallengeModalLabel"> CHALLENGE <span class="completedChallengeId"></span></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p> You Have Completed Challenge <span class="completedChallengeId"></span></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="complete"> Complete </button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cancel </button>
-      </div>
+<div id="completeChallengeModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="completeChallengeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="completeChallengeModalLabel"> CHALLENGE
+                    <span class="completedChallengeId"></span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p> You Have Completed Challenge
+                    <span class="completedChallengeId"></span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="complete"> Complete </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cancel </button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <!-- MODAL TO HIDE CHALLENGE AND REDIRECT USER TO PROFILE-->

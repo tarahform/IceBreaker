@@ -79,8 +79,8 @@ var breweryId = "50327c8591d4c4b30a586d5d";
 
 // FORSQUARE API
 function getFromFourSquare(categoryId) {
-    var clientID = "TRLYPN3LXDOCRD45MYN3W4T4GEISSM0IKUVDKRIVB3KIMPYI";
-    var clientSecret = "1DCSTIV3F5EUKJTXDTCCFLZSLP4QROJ5RHI5PNAK2EKRJ5WV";
+    var clientID = "T4VWM3GZQUGCDRMYVUU4SIRENRXHS5CB4RK1MSSKXDOOC2QU";
+    var clientSecret = "5HCT42CKNXK24MXIHRYETMXCFZMGKKKIS4DLWVN3BEUSM3TW";
     var fourSquareURL = "https://api.foursquare.com/v2/venues/search?&near=Chicago"
         + "&client_id=" + clientID + "&client_secret=" + clientSecret
         + "&v=20180604" + "&categoryId=" + categoryId;

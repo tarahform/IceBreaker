@@ -250,3 +250,14 @@ p {
 }
 /*End of About Page*/
 /* ============================================== */
+
+/* ============================================== */
+/*Challenge Page*/
+
+#challengesP, #challengesPointsP {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #0860AC;
+}
+/*End of Challenge Page*/
+/* ============================================== */
