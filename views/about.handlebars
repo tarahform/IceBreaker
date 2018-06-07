@@ -29,16 +29,17 @@
     <hr>
 
     <!--Map-->
-    <div class="row" id="mapBtnRow" data-aos="fade-right">
-        <div class="col-md-12" id="mapFloatingPanel">
-            <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
-            <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
-            <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    <div class="container-fluid" id="mapContainer">
+        <div class="row" id="mapBtnRow" data-aos="fade-right">
+            <div class="col-md-12" id="mapFloatingPanel">
+                <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+                <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+            </div>
         </div>
-    </div>
-    <div class="row" id="mapRow" data-aos="fade-left">
-        <div class="col-md-12" id="mapCol">
-            <div id="map"></div>
+        <div class="row" id="mapRow" data-aos="fade-left">
+            <div class="col-md-12" id="mapCol">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
     <!--End of Map-->
@@ -58,7 +59,9 @@
                     <img src="./img/developers/HalleConger.jpg" class="image img-fluid" alt="Halle">
                 </div>
                 <div class="overlay">
-                    <div class="devtext">Halle is a full stack developer who's passion for coding is only dwarfed by her love of Starbucks and purse dogs. The Blair Waldorf of web development never fails to impress with a bark as big as her tall skim milk caramel machiato. 
+                    <div class="devtext">Halle is a full stack developer who's passion for coding is only dwarfed by her love of Starbucks and
+                        purse dogs. The Blair Waldorf of web development never fails to impress with a bark as big as her
+                        tall skim milk caramel machiato.
                     </div>
                 </div>
             </div>

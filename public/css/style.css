@@ -58,12 +58,6 @@ nav {
 
 /* ============================================== */
 /* map */
-
-#mapRow, #mapBtnRow {
-  width: 90%; 
-  height: 90%; 
-  text-align:center;
-}
 #mapCol, #mapFloatingPanel {
   width: 70%; 
   height: 100%; 
