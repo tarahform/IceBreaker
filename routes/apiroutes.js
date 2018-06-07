@@ -43,7 +43,7 @@ module.exports = function (app) {
             res.json(data);
         });
     });
-    
+
     //post data to users table
     app.post("/api/users", function (req, res) {
         db.User.create({
@@ -86,4 +86,21 @@ module.exports = function (app) {
             res.json(data);
         });
     });
+
+    app.put("/api/users/:id", function (req, res) {
+        console.log("req.body", req.body)
+        db.User.update(
+            {
+                challenge_id: req.body.completedChallengesArray,
+                user_points: req.body.updatedPoints
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        ).then(function (data) {
+            res.sendStatus(200);
+        })
+    })
 }
