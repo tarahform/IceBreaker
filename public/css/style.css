@@ -157,10 +157,11 @@ footer {
 /*User Profile*/
 #userPicture {
   border-radius: 50%;
-  margin-left: 25%;
+  margin-left: 50%;
 }
 #userInfo {
   padding-top: 125px;
+  margin-left: 25px;
 }
 /*End of User Profile*/
 /* ============================================== */
