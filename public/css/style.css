@@ -155,44 +155,47 @@ footer {
 
 /* ============================================== */
 /*User Profile*/
-#userPicture {
-  border-radius: 50%;
-  margin-left: 50%;
+#userProfilePhotoCard {
+  position: relative;
+  width: 100%;
+  border: none;
 }
-#userInfo {
-  padding-top: 125px;
-  margin-left: 25px;
+#userPicture {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 350px;
+  height: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  border: none;
+}
+#userPictureDiv:hover .overlay {
+  opacity: 1;
+  border: none;
+}
+#userProfilePhotoBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#userProfileRow2 {
+  margin-left: 10%;
 }
 /*End of User Profile*/
 /* ============================================== */
 
-/* ============================================== */
-/* Progress Bar */
-.circular-progress-bar {
-  position: relative;
-  margin: 0 auto;
-  transform: rotate(-90deg);
-}
-.progress-percentage, .progress-text {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  text-align: center;
-  padding: 0px 60px;
-}
-.progress-percentage {
-  font-size: 60px;
-  left: 60%;
-}
-.progress-text {
-  left: 35%;
-  color: #585858;
-  font-size: 21px;
-}
-/*End of Progress Bar*/
-/* ============================================== */
 
 
 
