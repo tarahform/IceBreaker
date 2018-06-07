@@ -224,10 +224,10 @@ p {
   line-height: 1.8;
 }
 #missonDiv {
-  padding: 50px, 0, 0, 0;
+  padding: 0, 20%, 50px, 20%;
 }
 #aboutDiv {
-  padding: 50px, 0, 0, 0;
+  padding: 50px, 20%, 0, 20%;
 }
 /*End of About Page*/
 /* ============================================== */
