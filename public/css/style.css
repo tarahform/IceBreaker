@@ -25,14 +25,16 @@ body {
   font-size: 50pt;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  color: #0860AC;
 }
 #pHeroImgText{
   font-size: 25pt;
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 #heroImgText {
-  color: white;
   display: block;
+  text-align: center;
 }
 .centered {
   position: absolute;
