@@ -14,6 +14,9 @@
     <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/"
         crossorigin="anonymous">
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -27,9 +30,30 @@
         };
         firebase.initializeApp(config);
     </script>
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <script>
+        var currentUser = false;
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                if (currentUser === false) {
+                    $.ajax({
+                        type: "GET",
+                        url: "/api/users/" + user.email
+                    }).then(function (res) {
+                        currentUser = res[0];
+                        console.log("CURRENT USER ", currentUser);
+                    });
+                }
+                console.log("User is signed in.")
+                console.log("user", user.email);
+            } else {
+                currentUser = false;
+                console.log("No user is signed in.")
+            }
+        });
+    </script>
+
     <!--Bootstrap-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -56,13 +80,16 @@
                 <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/userprofile">Profile</a>
+                <a class="nav-link profileSignOutBtns" href="/userprofile">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signin">Login</a>
+                <a class="nav-link signInSignUpBtns" href="/signin">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signup">Sign Up</a>
+                <a class="nav-link signInSignUpBtns" href="/signup">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a id="signOut" class="nav-link profileSignOutBtns" href="/">Sign Out</a>
             </li>
         </ul>
     </nav>

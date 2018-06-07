@@ -8,104 +8,54 @@ $(document).ready(function () {
     //==========================================================================//
     // Firebase Auth //
 
-    // //this code creates and signs in a user everytime the app is run
-    // console.log("test user");
-
-    // const email = "testUser2@gmail.com";
-    // const pass = "testUser2"
-    // const auth = firebase.auth();
-    // const promise = firebase.auth().createUserWithEmailAndPassword(email, pass);
-    // promise.catch(e => console.log(e.message));
-
-    var loggedIn = false;
-
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log("signed in: " + user.email);
-            loggedIn = true;
-            // User is signed in.
-        } else {
-            // No user is signed in.
-            console.log("User has been signed out")
-            loggedIn = false;
+    $("#signUpForm").on("submit", function (event) {
+        event.preventDefault();
+        var newUser = {
+            first_name: $("#firstNameInput").val().trim(),
+            middle_name: $("#middleNameInput").val().trim(),
+            last_name: $("#lastNameInput").val().trim(),
+            email: $("#emailInput").val().trim(),
+            phone_number: $("#phoneInput").val().trim(),
+            age: $("#ageInput").val().trim(),
+            challenge_id: "[]",
+            user_points: 0
         }
-    });
-    $("#signInSubmit").on("click", function (event) {
-        event.preventDefault()
-        // console.log("Clicked");
-        var user = firebase.auth().currentUser;
-        if (loggedIn === true) {
-            logout();
-        } else {
+        var userName = $("#createUserNameInput").val().trim();
+        var password = $("#passwordInput").val().trim();
+        // console.log(newUser);
 
-        }
-    });
-
-    $("#signInSubmit").on("click", function (event) {
-        event.preventDefault()
-        signin();
-    })
-    function signin() {
-        var loginUserNameInput = $("#loginUserNameInput").val().trim();
-        var passwordInput = $("#loginPasswordInput").val().trim();
-        // console.log("Before signin", emailInput);
-
-        firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput)
-            .then(function (user) {
-                console.log(user);
-            })
-            .catch(function (error) {
+        firebase.auth().createUserWithEmailAndPassword(newUser.email, password)
+            .then(function () {
+                console.log("adding new user to database");
+                return $.ajax({
+                    type: "POST",
+                    url: "/api/users",
+                    data: newUser
+                })
+            }).then(function (res) {
+                console.log("Response", res);
+            }).catch(function (error) {
+                // Handle Errors here.
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                // console.log("error: " + errorMessage);
-            });
-    }
-    function logout() {
-        firebase.auth().signOut().then(function () {
+                console.log("error", error);
 
+                // ...
+                console.log("ERROR MAKING COUNT");
+                console.log(errorCode);
+                console.log(errorMessage);
+
+
+
+            });
+    });
+
+    $("#signOut").on("click", function () {
+        firebase.auth().signOut().then(function () {
+            console.log("Sign Out Successful");
         }).catch(function (error) {
             console.log(error);
         });
-    }
-
-       // create new user //
-
-        // //this code creates and signs in a user everytime the app is run
-        // console.log("test user");
-
-        // const email = "testUser2@gmail.com";
-        // const pass = "testUser2"
-        // const auth = firebase.auth();
-        // const promise = firebase.auth().createUserWithEmailAndPassword(email, pass);
-        // promise.catch(e => console.log(e.message));
-        
-    // I think the reason this does'nt work is because newUser() is never called
-    // function newUser() {
-    //     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-    //         $("#signUpSubmitBtn").on("click", function () {
-    //             var createUserNameInput = $("#createUserNameInput").val().trim();
-    //             var passwordInput = $("#passwordInput").val().trim();
-    //         })
-    //     }, function (error, userData) {
-    //         if (error) {
-    //             console.log("Error creating user:", error);
-    //         } else {
-    //             console.log("Successfully created user account with uid:", userData.uid);
-    //         }
-    //     });
-    //     signin();
-    // }
-
-    //Sign Up On Click Function N.M.E.
-    //In theory this should create a user using the entered email and password and sign them in automatically
-    //It is basically the same code as the version that runs everytime the page refreshes, using an onClick function and JQuery
-    $("#signUpSubmitBtn").on("click", function() {
-        console.log("the function runs");
-        const email = $("#createUserNameInput").val().trim();
-        const password = $("#passwordInput").val().trim();
-        const auth = firebase.auth();
-        const promise = firebase.auth().createUserWithEmailAndPassword(email, password);
-        promise.catch(e => console.log(e.message));
     });
 
     // End of Firebase Auth //
