@@ -25,12 +25,14 @@ body {
   font-size: 50pt;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: #0860AC;
+  color: white;
+  text-shadow: 2px, 2px, 4px, #000000;
 }
 #pHeroImgText{
   font-size: 25pt;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  text-shadow: 2px, 2px, 4px, #000000;
 }
 #heroImgText {
   display: block;
@@ -58,12 +60,6 @@ nav {
 
 /* ============================================== */
 /* map */
-
-#mapRow, #mapBtnRow {
-  width: 90%; 
-  height: 90%; 
-  text-align:center;
-}
 #mapCol, #mapFloatingPanel {
   width: 70%; 
   height: 100%; 
@@ -197,18 +193,43 @@ footer {
 /*End of User Profile*/
 /* ============================================== */
 
+/* ============================================== */
+/*About Page*/
+#signupPage {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+/*End of About Page*/
+/* ============================================== */
 
 /* ============================================== */
+/* Modal */
+.completeChallengeModal {
+  position: fixed;
+}
+/* Modal */
+/* ============================================== */
+
+
 /*SignUpPage*/
 #signupPage {
   padding-left: 30%;
-  padding-right: 20%;
+  padding-right: 30%;
 }
 #photolabelP {
   font-size:8pt;
   color:gray;
 }
 /*End of SignUpPage*/
+/* ============================================== */
+
+/* ============================================== */
+/*login Page*/
+#signinPage {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+/*End of login Page*/
 /* ============================================== */
 
 /* ============================================== */
@@ -223,11 +244,9 @@ p {
   font-weight: light;
   line-height: 1.8;
 }
-#missonDiv {
-  padding: 50px, 0, 0, 0;
-}
-#aboutDiv {
-  padding: 50px, 0, 0, 0;
+#missionRow {
+  margin: 20%, 20%, 20%, 20%;
+  padding: 20%, 20%, 20%, 20%;
 }
 /*End of About Page*/
 /* ============================================== */

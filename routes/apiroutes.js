@@ -21,16 +21,16 @@ module.exports = function (app) {
     //get data from users table
     //add an id to get data specifically from that user
     //add an id and a column name to be even more specific
-    app.get("/api/users/:id?/:columnName?", function (req, res) {
+    app.get("/api/users/:email?/:columnName?", function (req, res) {
         if (req.params.columnName === "email" || req.params.columnName === "phone_number") {
             res.json("Insufficient Permissions")
             return;
         }
         var queryParams = {};
         console.log("PARAMS");
-        console.log(req.params.id);
-        if (req.params.id) {
-            queryParams.where = { id: req.params.id };
+        console.log(req.params.email);
+        if (req.params.email) {
+            queryParams.where = { email: req.params.email };
         }
         if (req.params.columnName) {
             queryParams.attributes = ["id", req.params.columnName]
@@ -43,7 +43,7 @@ module.exports = function (app) {
             res.json(data);
         });
     });
-    
+
     //post data to users table
     app.post("/api/users", function (req, res) {
         db.User.create({
@@ -86,4 +86,21 @@ module.exports = function (app) {
             res.json(data);
         });
     });
+
+    app.put("/api/users/:id", function (req, res) {
+        console.log("req.body", req.body)
+        db.User.update(
+            {
+                challenge_id: req.body.completedChallengesArray,
+                user_points: req.body.updatedPoints
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        ).then(function (data) {
+            res.sendStatus(200);
+        })
+    })
 }
