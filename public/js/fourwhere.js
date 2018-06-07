@@ -67,11 +67,6 @@ function clearMarkers() {
 function showMarkers() {
     setMapOnAll(map);
 }
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers() {
-    clearMarkers();
-    markers = [];
-}
 
 // Test Map with markers //
 //==========================================================================//

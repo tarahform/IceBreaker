@@ -1,24 +1,28 @@
 <div class="container-fluid" id="aboutPage">
-    <hr>
     <!-- About Section -->
-    <div class="row text-center" id="aboutBodyRow" data-aos="fade-up-right">
-        <div class="col-md-6" id="mission">
-            <h1>Mission Statement</h1>
-            <p>Here at Ice Breaker, we focus on inspiring and promoting sociability and kindness in the world. We all need a
-                pick-me-up sometimes, amiright? So we partnered with your local coffee shops to give you more incentive to
-                complete a kind act, to bring yourself out of your comfort zone, and to socialize in a way you may not have
-                before.
-            </p>
+    <div class="container" id="aboutContainer">
+        <div class="row text-center" data-aos="fade-up-right" id="missionRow">
+            <div class="col-md-12 text-center" id="missionDiv">
+                <h1 id="aboutPageh1">Mission Statement</h1>
+                <p>Here at Ice Breaker, we focus on inspiring and promoting sociability and kindness in the world. We all need
+                    a pick-me-up sometimes, amiright? So we partnered with your local coffee shops to give you more incentive
+                    to complete a kind act, to bring yourself out of your comfort zone, and to socialize in a way you may
+                    not have before.
+                </p>
+            </div>
         </div>
-        <div class="col-md-6" id="about" data-aos="fade-up-left">
-            <h1>How It Works</h1>
-            <p>Create a profile.
-                <br> Search for local coffee shops in your area.
-                <br> Go get some coffee!
-                <br> Check-in and complete some challenges.
-                <br> Rack up points to use towards discounts.
-                <br> Leave knowing you tried something new today.
-            </p>
+        <hr />
+        <div class="row text-center" data-aos="fade-up-right">
+            <div class="col-md-12 text-center" id="aboutDiv" data-aos="fade-up-left">
+                <h1 id="aboutPageh1">How It Works</h1>
+                <p>Create a profile.
+                    <br> Search for venues in your area.
+                    <br> Go get some coffee!
+                    <br> Check-in and complete some challenges.
+                    <br> Rack up points to use towards discounts.
+                    <br> Leave knowing you tried something new today.
+                </p>
+            </div>
         </div>
     </div>
     <!--End of ABout Section-->
@@ -26,76 +30,80 @@
     <hr>
 
     <!--Map-->
-    <div class="row" id="mapBtnRow" data-aos="fade-right">
-        <div class="col-md-12" id="mapFloatingPanel">
-            <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
-            <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
-            <button onclick="deleteMarkers();" type="button btn-success" id="mapbtn">Delete Markers</button>
+    <div class="container-fluid" id="mapContainer">
+        <div class="row" id="mapBtnRow" data-aos="fade-right">
+            <div class="col-md-12" id="mapFloatingPanel">
+                <button onclick="clearMarkers();" type="button btn-success" id="mapbtn">Hide Markers</button>
+                <button onclick="showMarkers();" type="button btn-success" id="mapbtn">Show All Markers</button>
+            </div>
         </div>
-    </div>
-    <div class="row" id="mapRow" data-aos="fade-left">
-        <div class="col-md-12" id="mapCol">
-            <div id="map"></div>
+        <div class="row" id="mapRow" data-aos="fade-left">
+            <div class="col-md-12" id="mapCol">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
     <!--End of Map-->
-    <hr>
-    <!--IceBreaker Developers-->
-    <div class="row" id="developers">
-        <div class="col-md-12 aos-item" data-aos="flip-up">
-            <h2 class="developers">Developers</h2>
-        </div>
-    </div>
-    <div class="row" id="aboutBodyRow">
-        <div class="col-md-3 aos-item" data-aos="flip-down">
-            <div class="card developer-image">
-                <div class="card-body">
-                    <img src="./img/developers/HalleConger.jpg" class="image img-fluid" alt="Halle" id="devImgLink">
-                </div>
-                <div class="overlay">
-                    <div class="devtext">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 aos-item" data-aos="flip-down">
-            <div class="card developer-image">
-                <div class="card-body">
-                    <img src="./img/developers/NicholasEdwards.jpg" class="image img-fluid" alt="Nick" id="devImgLink">
-                </div>
-                <div class="overlay">
-                    <div class="devtext">Nick is full stack web developer having developed a keen interest in his craft at young age. When he
-                        is not writing code or cooking up new ideas he is most likely buried in a book or a video game.</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 aos-item" data-aos="flip-down">
-            <div class="card developer-image">
-                <div class="card-body">
-                    <img src="./img/developers/TarahPerry.jpg" class="image img-fluid" alt="Tarah" id="devImgLink">
-                </div>
-                <div class="overlay">
-                    <div class="devtext">Tarah is web developer from Austin, Texas. Her background is in cave research. In her spare time Tarah
-                        can be found on a new hiking trail or in a bar trying to find new sour brews.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 aos-item" data-aos="flip-down">
-            <div class="card developer-image">
-                <div class="card-body">
-                    <img src="./img/developers/DanielAlamo.jpg" class="image img-fluid" alt="Dan" id="devImgLink">
-                </div>
-                <div class="overlay">
-                    <div class="devtext">Daniel is a Full Stack Web Developer who loves long jogs on the beach. Daniel loves humor. The dryer
-                        the harder he laughs. The jokes he enjoys most are his own.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End IceBreaker Developers-->
 </div>
+<hr>
+
+<!--IceBreaker Developers-->
+<div class="row" id="developers">
+    <div class="col-md-12 aos-item" data-aos="flip-up">
+        <h2 class="developers">Developers</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 aos-item" data-aos="flip-down">
+        <div class="card developer-image">
+            <div class="card-body">
+                <img src="./img/developers/HalleConger.jpg" class="image img-fluid" alt="Halle">
+            </div>
+            <div class="overlay">
+                <div class="devtext">Halle is a full stack developer who's passion for coding is only dwarfed by her love of Starbucks and purse
+                    dogs. The Blair Waldorf of web development never fails to impress with a bark as big as her tall skim
+                    milk caramel machiato.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 aos-item" data-aos="flip-down">
+        <div class="card developer-image">
+            <div class="card-body">
+                <img src="./img/developers/NicholasEdwards.jpg" class="image img-fluid" alt="Nick">
+            </div>
+            <div class="overlay">
+                <div class="text" id="devText">Nick is full stack web developer having developed a keen interest in his craft at young age. When he is not
+                    writing code or cooking up new ideas he is most likely buried in a book or a video game. </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 aos-item" data-aos="flip-down">
+        <div class="card developer-image">
+            <div class="card-body">
+                <img src="./img/developers/TarahPerry.jpg" class="image img-fluid" alt="Tarah">
+            </div>
+            <div class="overlay">
+                <div class="text" id="devText">Tarah is web developer from Austin, Texas. Her background is in cave research. In her spare time Tarah can
+                    be found on a new hiking trail or in a bar trying to find new sour brews.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 aos-item" data-aos="flip-down">
+        <div class="card developer-image">
+            <div class="card-body">
+                <img src="./img/developers/DanielAlamo.jpg" class="image img-fluid" alt="Dan">
+            </div>
+            <div class="overlay">
+                <div class="text" id="devText">Daniel is a Full Stack Web Developer who loves long jogs on the beach. Daniel loves humor. The dryer the
+                    harder he laughs. The jokes he enjoys most are his own.</div>
+            </div>
+        </div>
+    </div>
+    <hr />
+</div>
+<!--End IceBreaker Developers-->
 <!--Google Maps API-->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAny8QhQ3ISkkGwCimkBoNfskamSbb7hBU&callback=initMap"> </script>
 <!--JS-->
