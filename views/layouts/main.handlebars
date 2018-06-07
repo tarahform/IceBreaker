@@ -47,9 +47,19 @@
                 }
                 console.log("User is signed in.")
                 console.log("user", user.email);
+
+                //profileSignOutBtns class appears
+                $(".profileSignOutBtns").show();
+               //signInSignUpBtns class disappears
+                $(".signInSignUpBtns").hide();
             } else {
                 currentUser = false;
                 console.log("No user is signed in.")
+
+                //profileSignOutBtns class disappears
+                $(".profileSignOutBtns").hide();
+               //signInSignUpBtns class appears
+               $(".signInSignUpBtns").show();
             }
         });
     </script>
@@ -79,17 +89,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link profileSignOutBtns" href="/userprofile">Profile</a>
+            <li class="nav-item profileSignOutBtns">
+                <a class="nav-link" href="/userprofile">Profile</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link signInSignUpBtns" href="/signin">Login</a>
+            <li class="nav-item signInSignUpBtns">
+                <a class="nav-link" href="/signin">Login</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link signInSignUpBtns" href="/signup">Sign Up</a>
+            <li class="nav-item signInSignUpBtns">
+                <a class="nav-link" href="/signup">Sign Up</a>
             </li>
-            <li class="nav-item">
-                <a id="signOut" class="nav-link profileSignOutBtns" href="/">Sign Out</a>
+            <li class="nav-item profileSignOutBtns">
+                <a id="signOut" class="nav-link" href="/">Sign Out</a>
             </li>
         </ul>
     </nav>
